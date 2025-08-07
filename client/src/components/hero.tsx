@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -65,10 +64,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            We're not an agency.<br />
-            Not a company.<br />
-            <span className="gradient-text">Just two students</span><br />
-            who happen to be developers.
+            Passionate developers.<br />
+            <span className="gradient-text">Creative minds.</span><br />
+            Building digital excellence.
           </motion.h1>
           
           <motion.p 
@@ -77,9 +75,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Hi! We're <span className="text-blue-primary font-semibold">Milan</span> and{' '}
+            We're <span className="text-blue-primary font-semibold">Milan</span> and{' '}
             <span className="text-blue-primary font-semibold">Dhiraj</span>, 
-            student developers from <span className="text-purple-accent font-semibold">IIT Madras</span> — building websites, brands, and digital experiences.
+            innovative developers from <span className="text-purple-accent font-semibold">IIT Madras</span> — crafting cutting-edge web and mobile solutions that transform ideas into reality.
           </motion.p>
 
           <motion.div 
@@ -106,42 +104,7 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Social Links in Hero */}
-          <motion.div 
-            className="flex justify-center space-x-6 mt-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <motion.a
-              href="#"
-              className="text-2xl text-gray-400 hover:text-blue-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-2xl text-gray-400 hover:text-blue-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FaGithub />
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-2xl text-gray-400 hover:text-blue-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FaTwitter />
-            </motion.a>
-            <motion.a
-              href="#"
-              className="text-2xl text-gray-400 hover:text-blue-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FaInstagram />
-            </motion.a>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>

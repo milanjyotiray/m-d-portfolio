@@ -15,6 +15,7 @@ export default function Contact() {
     name: "",
     email: "",
     projectDescription: "",
+    country: "",
     budget: "",
     timeline: ""
   });
@@ -44,6 +45,7 @@ export default function Contact() {
         name: "",
         email: "",
         projectDescription: "",
+        country: "",
         budget: "",
         timeline: ""
       });
@@ -225,6 +227,24 @@ export default function Contact() {
                 />
               </div>
 
+              <div>
+                <Label htmlFor="country">Country</Label>
+                <Select value={formData.country} onValueChange={(value) => setFormData(prev => ({ ...prev, country: value, budget: "" }))}>
+                  <SelectTrigger className="bg-dark-secondary border-gray-600 text-white focus:border-blue-primary">
+                    <SelectValue placeholder="Select your country" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-dark-secondary border-gray-600">
+                    <SelectItem value="india">India</SelectItem>
+                    <SelectItem value="usa">United States</SelectItem>
+                    <SelectItem value="uk">United Kingdom</SelectItem>
+                    <SelectItem value="canada">Canada</SelectItem>
+                    <SelectItem value="australia">Australia</SelectItem>
+                    <SelectItem value="germany">Germany</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="budget">Budget Range</Label>
@@ -233,11 +253,23 @@ export default function Contact() {
                       <SelectValue placeholder="Select budget range" />
                     </SelectTrigger>
                     <SelectContent className="bg-dark-secondary border-gray-600">
-                      <SelectItem value="under-5k">Under $5,000</SelectItem>
-                      <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                      <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                      <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                      <SelectItem value="50k-plus">$50,000+</SelectItem>
+                      {formData.country === "india" ? (
+                        <>
+                          <SelectItem value="under-4l">Under ₹4,00,000</SelectItem>
+                          <SelectItem value="4l-8l">₹4,00,000 - ₹8,00,000</SelectItem>
+                          <SelectItem value="8l-20l">₹8,00,000 - ₹20,00,000</SelectItem>
+                          <SelectItem value="20l-40l">₹20,00,000 - ₹40,00,000</SelectItem>
+                          <SelectItem value="40l-plus">₹40,00,000+</SelectItem>
+                        </>
+                      ) : (
+                        <>
+                          <SelectItem value="under-5k">Under $5,000</SelectItem>
+                          <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
+                          <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
+                          <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
+                          <SelectItem value="50k-plus">$50,000+</SelectItem>
+                        </>
+                      )}
                     </SelectContent>
                   </Select>
                 </div>

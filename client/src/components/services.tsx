@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaCode, FaPalette, FaRobot, FaPaintBrush, FaChartLine, FaSearch, FaHashtag, FaRocket } from "react-icons/fa";
+import { FaCode, FaPalette, FaRobot, FaPaintBrush, FaChartLine, FaSearch, FaRocket, FaMobile } from "react-icons/fa";
 import { FaWordpress } from "react-icons/fa";
 import { useState } from "react";
 import ServiceModal from "./service-modal";
@@ -58,10 +58,10 @@ export default function Services() {
       gradient: "from-teal-500 to-green-500"
     },
     {
-      id: "social-media",
-      title: "Social Media Management",
-      description: "Comprehensive social media strategy and content management services.",
-      icon: FaHashtag,
+      id: "app-development",
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android.",
+      icon: FaMobile,
       gradient: "from-purple-500 to-pink-500"
     },
     {

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
+import TestimonialSwiper from "./testimonial-swiper";
 
 export default function Testimonials() {
   const testimonials = [
@@ -65,40 +65,7 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              className="bg-dark-secondary p-8 rounded-2xl border border-gray-700"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-500 mb-2">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "{testimonial.feedback}"
-              </p>
-              <div className="flex items-center">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4 object-cover"
-                />
-                <div>
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <TestimonialSwiper testimonials={testimonials} />
       </div>
     </section>
   );

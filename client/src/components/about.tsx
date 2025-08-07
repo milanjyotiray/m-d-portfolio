@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaFigma, FaWordpress, FaGithub, FaGoogle } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiFirebase } from "react-icons/si";
+import { FaReact, FaNodeJs, FaFigma, FaWordpress, FaGithub, FaGoogle, FaLinkedin, FaInstagram, FaTwitter, FaApple, FaAndroid } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiFirebase, SiFlutter, SiReact, SiKotlin, SiSwift } from "react-icons/si";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function About() {
@@ -13,6 +13,10 @@ export default function About() {
     { icon: FaWordpress, name: "WordPress", color: "text-blue-600" },
     { icon: SiFirebase, name: "Firebase", color: "text-orange-500" },
     { icon: FaGithub, name: "GitHub", color: "text-white" },
+    { icon: SiFlutter, name: "Flutter", color: "text-blue-500" },
+    { icon: SiReact, name: "React Native", color: "text-blue-400" },
+    { icon: SiKotlin, name: "Kotlin", color: "text-purple-600" },
+    { icon: SiSwift, name: "Swift", color: "text-orange-600" },
   ];
 
   return (
@@ -52,10 +56,27 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold mb-2 gradient-text">Milan</h3>
             <p className="text-blue-primary font-semibold mb-4">Full-Stack Developer</p>
-            <p className="text-gray-300 max-w-sm mx-auto">
+            <p className="text-gray-300 max-w-sm mx-auto mb-4">
               Passionate about creating seamless user experiences and robust backend systems. 
               Specializes in React, Node.js, and modern web technologies.
             </p>
+            <div className="flex justify-center space-x-3">
+              <a href="#" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
+                <FaLinkedin />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors">
+                <FaGithub />
+              </a>
+              <a href="#" className="text-blue-400 hover:text-blue-300 text-xl transition-colors">
+                <FaTwitter />
+              </a>
+              <a href="#" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
+                <FaInstagram />
+              </a>
+              <a href="#" className="text-blue-primary hover:text-blue-secondary text-xl transition-colors" title="Portfolio Website">
+                <FaGoogle />
+              </a>
+            </div>
           </motion.div>
 
           {/* Dhiraj */}
@@ -75,10 +96,27 @@ export default function About() {
             </div>
             <h3 className="text-2xl font-bold mb-2 gradient-text">Dhiraj</h3>
             <p className="text-purple-accent font-semibold mb-4">UI/UX Designer & Developer</p>
-            <p className="text-gray-300 max-w-sm mx-auto">
+            <p className="text-gray-300 max-w-sm mx-auto mb-4">
               Expert in creating beautiful, functional designs and bringing them to life with code. 
               Focuses on user-centered design and modern development practices.
             </p>
+            <div className="flex justify-center space-x-3">
+              <a href="#" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
+                <FaLinkedin />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors">
+                <FaGithub />
+              </a>
+              <a href="#" className="text-blue-400 hover:text-blue-300 text-xl transition-colors">
+                <FaTwitter />
+              </a>
+              <a href="#" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
+                <FaInstagram />
+              </a>
+              <a href="#" className="text-purple-accent hover:text-purple-400 text-xl transition-colors" title="Portfolio Website">
+                <FaGoogle />
+              </a>
+            </div>
           </motion.div>
         </div>
 

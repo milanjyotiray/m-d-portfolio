@@ -14,6 +14,7 @@ export const contacts = pgTable("contacts", {
   name: text("name").notNull(),
   email: text("email").notNull(),
   projectDescription: text("project_description").notNull(),
+  country: text("country"),
   budget: text("budget"),
   timeline: text("timeline"),
   createdAt: timestamp("created_at").defaultNow(),
