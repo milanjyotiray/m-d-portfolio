@@ -3,48 +3,48 @@ import { Button } from "@/components/ui/button";
 
 export default function Projects() {
   const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "Modern e-commerce solution with advanced features and seamless user experience.",
-      image: "#",
-      tech: ["React", "Node.js", "MongoDB"],
-      techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
-    },
-    {
-      title: "Startup Landing Page",
-      description: "High-converting landing page for a tech startup with modern animations.",
-      image: "#",
-      tech: ["Next.js", "Tailwind", "Framer Motion"],
-      techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-orange-500/20 text-orange-500"]
-    },
-    {
-      title: "Portfolio Website",
-      description: "Creative portfolio site for a designer with interactive elements and smooth animations.",
-      image: "#",
-      tech: ["React", "Three.js", "GSAP"],
-      techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-pink-500/20 text-pink-500"]
-    },
-    {
-      title: "Mobile App UI/UX",
-      description: "Complete mobile app design with modern UI patterns and user-friendly interface.",
-      image: "#",
-      tech: ["Figma", "React Native", "Firebase"],
-      techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
-    },
-    {
-      title: "WordPress Business Site",
-      description: "Professional WordPress website with custom theme and advanced functionality.",
-      image: "#",
-      tech: ["WordPress", "PHP", "MySQL"],
-      techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-yellow-500/20 text-yellow-500"]
-    },
-    {
-      title: "AI Chatbot Platform",
-      description: "Intelligent chatbot with natural language processing and machine learning capabilities.",
-      image: "#",
-      tech: ["Python", "OpenAI", "Flask"],
-      techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
-    }
+    // {
+    //   title: "E-Commerce Platform",
+    //   description: "Modern e-commerce solution with advanced features and seamless user experience.",
+    //   image: "#",
+    //   tech: ["React", "Node.js", "MongoDB"],
+    //   techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
+    // },
+    // {
+    //   title: "Startup Landing Page",
+    //   description: "High-converting landing page for a tech startup with modern animations.",
+    //   image: "#",
+    //   tech: ["Next.js", "Tailwind", "Framer Motion"],
+    //   techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-orange-500/20 text-orange-500"]
+    // },
+    // {
+    //   title: "Portfolio Website",
+    //   description: "Creative portfolio site for a designer with interactive elements and smooth animations.",
+    //   image: "#",
+    //   tech: ["React", "Three.js", "GSAP"],
+    //   techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-pink-500/20 text-pink-500"]
+    // },
+    // {
+    //   title: "Mobile App UI/UX",
+    //   description: "Complete mobile app design with modern UI patterns and user-friendly interface.",
+    //   image: "#",
+    //   tech: ["Figma", "React Native", "Firebase"],
+    //   techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
+    // },
+    // {
+    //   title: "WordPress Business Site",
+    //   description: "Professional WordPress website with custom theme and advanced functionality.",
+    //   image: "#",
+    //   tech: ["WordPress", "PHP", "MySQL"],
+    //   techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-yellow-500/20 text-yellow-500"]
+    // },
+    // {
+    //   title: "AI Chatbot Platform",
+    //   description: "Intelligent chatbot with natural language processing and machine learning capabilities.",
+    //   image: "#",
+    //   tech: ["Python", "OpenAI", "Flask"],
+    //   techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
+    // }
   ];
 
   return (
