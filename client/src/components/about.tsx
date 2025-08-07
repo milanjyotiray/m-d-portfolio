@@ -56,10 +56,10 @@ export default function About() {
               />
             </div>
             <h3 className="text-2xl font-bold mb-2 gradient-text">Milan</h3>
-            <p className="text-blue-primary font-semibold mb-4">Full-Stack Developer</p>
+            <p className="text-blue-primary font-semibold mb-4">Frontend Developer & UI/UX Designer</p>
             <p className="text-gray-300 max-w-sm mx-auto mb-4">
-              Passionate about creating seamless user experiences and robust backend systems. 
-              Specializes in React, Node.js, and modern web technologies.
+              Passionate about creating beautiful user interfaces and seamless user experiences. 
+              Specializes in Python, React, and modern web technologies.
             </p>
             <div className="flex justify-center space-x-3">
               <a href="#" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
@@ -96,10 +96,10 @@ export default function About() {
               />
             </div>
             <h3 className="text-2xl font-bold mb-2 gradient-text">Dhiraj</h3>
-            <p className="text-purple-accent font-semibold mb-4">UI/UX Designer & Developer</p>
+            <p className="text-purple-accent font-semibold mb-4">Backend Developer</p>
             <p className="text-gray-300 max-w-sm mx-auto mb-4">
-              Expert in creating beautiful, functional designs and bringing them to life with code. 
-              Focuses on user-centered design and modern development practices.
+              Expert in building robust backend systems and APIs that power amazing applications. 
+              Focuses on scalable architecture and performance optimization.
             </p>
             <div className="flex justify-center space-x-3">
               <a href="#" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">

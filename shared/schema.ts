@@ -17,6 +17,7 @@ export const contacts = pgTable("contacts", {
   service: text("service"),
   country: text("country"),
   budget: text("budget"),
+  customBudget: text("custom_budget"),
   timeline: text("timeline"),
   createdAt: timestamp("created_at").defaultNow(),
 });

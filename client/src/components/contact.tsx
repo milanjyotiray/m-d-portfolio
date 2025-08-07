@@ -18,6 +18,7 @@ export default function Contact() {
     service: "",
     country: "",
     budget: "",
+    customBudget: "",
     timeline: ""
   });
 
@@ -49,6 +50,7 @@ export default function Contact() {
         service: "",
         country: "",
         budget: "",
+        customBudget: "",
         timeline: ""
       });
       
@@ -284,6 +286,7 @@ export default function Contact() {
                             <SelectItem value="1l-3l">₹1,00,000 - ₹3,00,000</SelectItem>
                             <SelectItem value="3l-5l">₹3,00,000 - ₹5,00,000</SelectItem>
                             <SelectItem value="5l-plus">₹5,00,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         ) : formData.service === "app-dev" ? (
                           <>
@@ -292,6 +295,7 @@ export default function Contact() {
                             <SelectItem value="5l-10l">₹5,00,000 - ₹10,00,000</SelectItem>
                             <SelectItem value="10l-20l">₹10,00,000 - ₹20,00,000</SelectItem>
                             <SelectItem value="20l-plus">₹20,00,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         ) : formData.service === "ui-ux" || formData.service === "branding" ? (
                           <>
@@ -300,6 +304,7 @@ export default function Contact() {
                             <SelectItem value="75k-1.5l">₹75,000 - ₹1,50,000</SelectItem>
                             <SelectItem value="1.5l-3l">₹1,50,000 - ₹3,00,000</SelectItem>
                             <SelectItem value="3l-plus">₹3,00,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         ) : (
                           <>
@@ -308,6 +313,7 @@ export default function Contact() {
                             <SelectItem value="1l-2l">₹1,00,000 - ₹2,00,000</SelectItem>
                             <SelectItem value="2l-5l">₹2,00,000 - ₹5,00,000</SelectItem>
                             <SelectItem value="5l-plus">₹5,00,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         )
                       ) : (
@@ -319,6 +325,7 @@ export default function Contact() {
                             <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
                             <SelectItem value="10k-20k">$10,000 - $20,000</SelectItem>
                             <SelectItem value="20k-plus">$20,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         ) : formData.service === "app-dev" ? (
                           <>
@@ -327,6 +334,7 @@ export default function Contact() {
                             <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
                             <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
                             <SelectItem value="100k-plus">$100,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         ) : formData.service === "ui-ux" || formData.service === "branding" ? (
                           <>
@@ -335,6 +343,7 @@ export default function Contact() {
                             <SelectItem value="3k-7k">$3,000 - $7,000</SelectItem>
                             <SelectItem value="7k-15k">$7,000 - $15,000</SelectItem>
                             <SelectItem value="15k-plus">$15,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         ) : (
                           <>
@@ -343,12 +352,28 @@ export default function Contact() {
                             <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
                             <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
                             <SelectItem value="25k-plus">$25,000+</SelectItem>
+                            <SelectItem value="custom">Others (Custom Budget)</SelectItem>
                           </>
                         )
                       )}
                     </SelectContent>
                   </Select>
                 </div>
+                
+                {/* Custom Budget Input */}
+                {formData.budget === "custom" && (
+                  <div>
+                    <Label htmlFor="customBudget">Your Budget</Label>
+                    <Input
+                      id="customBudget"
+                      type="text"
+                      placeholder={formData.country === "india" ? "Enter your budget in ₹" : "Enter your budget in $"}
+                      value={formData.customBudget}
+                      onChange={(e) => setFormData(prev => ({ ...prev, customBudget: e.target.value }))}
+                      className="bg-dark-secondary border-gray-600 text-white focus:border-blue-primary placeholder-gray-400"
+                    />
+                  </div>
+                )}
 
                 <div>
                   <Label htmlFor="timeline">Timeline</Label>

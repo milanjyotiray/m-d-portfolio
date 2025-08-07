@@ -46,6 +46,7 @@ export class MemStorage implements IStorage {
       id, 
       country: insertContact.country || null,
       budget: insertContact.budget || null,
+      customBudget: insertContact.customBudget || null,
       timeline: insertContact.timeline || null,
       createdAt: new Date() 
     };
