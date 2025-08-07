@@ -32,11 +32,39 @@ export default function Contact() {
     onSuccess: () => {
       toast({
         title: "Message Sent!",
-        description: "We'll get back to you soon via WhatsApp.",
+        description: "Your inquiry has been saved to Google Sheets and WhatsApp chat is opening.",
       });
       
       // Create WhatsApp message
-      const message = `Hi! I'm ${formData.name}. Project: ${formData.projectDescription}. Budget: ${formData.budget}. Timeline: ${formData.timeline}. Email: ${formData.email}`;
+      const serviceNames = {
+        "website-dev": "Website Development",
+        "ui-ux": "UI/UX Design", 
+        "app-dev": "Mobile App Development",
+        "ai-chatbot": "AI Chatbot Integration",
+        "branding": "Brand Design",
+        "digital-marketing": "Digital Marketing",
+        "seo": "SEO Optimization",
+        "wordpress": "WordPress Development",
+        "ecommerce": "E-commerce Solutions"
+      };
+
+      const budgetDisplay = formData.budget === "custom" 
+        ? `Custom Budget: ${formData.customBudget}`
+        : formData.budget;
+
+      const message = `Hi! I'm ${formData.name} and I'm interested in your services.
+
+📧 Email: ${formData.email}
+🎯 Service: ${serviceNames[formData.service as keyof typeof serviceNames] || formData.service}
+🌍 Country: ${formData.country}
+💰 Budget: ${budgetDisplay}
+⏰ Timeline: ${formData.timeline}
+
+📝 Project Description:
+${formData.projectDescription}
+
+Looking forward to discussing this project with you!`;
+      
       const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
       
       // Open WhatsApp
