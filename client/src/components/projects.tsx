@@ -6,42 +6,42 @@ export default function Projects() {
     {
       title: "E-Commerce Platform",
       description: "Modern e-commerce solution with advanced features and seamless user experience.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "#",
       tech: ["React", "Node.js", "MongoDB"],
       techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
     },
     {
       title: "Startup Landing Page",
       description: "High-converting landing page for a tech startup with modern animations.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "#",
       tech: ["Next.js", "Tailwind", "Framer Motion"],
       techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-orange-500/20 text-orange-500"]
     },
     {
       title: "Portfolio Website",
       description: "Creative portfolio site for a designer with interactive elements and smooth animations.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "#",
       tech: ["React", "Three.js", "GSAP"],
       techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-pink-500/20 text-pink-500"]
     },
     {
       title: "Mobile App UI/UX",
       description: "Complete mobile app design with modern UI patterns and user-friendly interface.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "#",
       tech: ["Figma", "React Native", "Firebase"],
       techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
     },
     {
       title: "WordPress Business Site",
       description: "Professional WordPress website with custom theme and advanced functionality.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "#",
       tech: ["WordPress", "PHP", "MySQL"],
       techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-yellow-500/20 text-yellow-500"]
     },
     {
       title: "AI Chatbot Platform",
       description: "Intelligent chatbot with natural language processing and machine learning capabilities.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "#",
       tech: ["Python", "OpenAI", "Flask"],
       techColors: ["bg-blue-primary/20 text-blue-primary", "bg-purple-accent/20 text-purple-accent", "bg-green-500/20 text-green-500"]
     }

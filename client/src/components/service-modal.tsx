@@ -50,7 +50,7 @@ export default function ServiceModal({ serviceId, services, onClose }: ServiceMo
       
       // Create WhatsApp message
       const message = `Hi! I'm ${formData.name} (${formData.email}). Interested in your ${service?.title} service. Message: ${formData.message}`;
-      const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/919678165375?text=${encodeURIComponent(message)}`;
       
       // Open WhatsApp
       window.open(whatsappUrl, '_blank');

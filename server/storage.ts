@@ -43,13 +43,15 @@ export class MemStorage implements IStorage {
     const id = randomUUID();
     const contact: Contact = { 
       ...insertContact, 
-      id, 
-      country: insertContact.country || null,
-      budget: insertContact.budget || null,
-      customBudget: insertContact.customBudget || null,
-      timeline: insertContact.timeline || null,
+      id,
+      service: insertContact.service ?? null,
+      country: insertContact.country ?? null,
+      budget: insertContact.budget ?? null,
+      customBudget: insertContact.customBudget ?? null,
+      timeline: insertContact.timeline ?? null,
       createdAt: new Date() 
-    };
+  };
+
     this.contacts.set(id, contact);
     return contact;
   }

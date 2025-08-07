@@ -50,31 +50,31 @@ export default function About() {
           >
             <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-primary/30 hover:border-blue-primary transition-colors">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
-                alt="Milan - Student Developer from IIT Madras"
-                className="w-full h-full object-cover"
+                  src="/images/milan.jpeg"
+                  alt="Milan - Student Developer from IIT Madras"
+                  className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-2 gradient-text">Milan</h3>
-            <p className="text-blue-primary font-semibold mb-4">Frontend Developer & UI/UX Designer</p>
+            <h3 className="text-2xl font-bold mb-2 gradient-text">Milanjyoti Ray</h3>
+            <p className="text-purple-accent font-semibold mb-4">Frontend Developer & UI/UX Designer</p>
             <p className="text-gray-300 max-w-sm mx-auto mb-4">
               Passionate about creating beautiful user interfaces and seamless user experiences. 
               Specializes in Python, React, and modern web technologies.
             </p>
             <div className="flex justify-center space-x-3">
-              <a href="#" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
+              <a href="https://www.linkedin.com/in/milanjyotiray" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
                 <FaLinkedin />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors">
+              <a href="https://github.com/milanjyotiray" className="text-gray-400 hover:text-white text-xl transition-colors">
                 <FaGithub />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white text-xl transition-colors">
+              <a href="https://X.com/MilanjyotiRay" className="text-gray-300 hover:text-white text-xl transition-colors">
                 <FaXTwitter />
               </a>
-              <a href="#" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
+              <a href="https://www.instagram.com/iamraymilanjyoti" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
                 <FaInstagram />
               </a>
-              <a href="#" className="text-blue-primary hover:text-blue-secondary text-xl transition-colors" title="Portfolio Website">
+              <a href="https://milanjyotiray.netlify.app" className="text-blue-primary hover:text-blue-secondary text-xl transition-colors" title="Portfolio Website">
                 <FaGoogle />
               </a>
             </div>
@@ -88,35 +88,35 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-purple-accent/30 hover:border-purple-accent transition-colors">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-primary/30 hover:border-blue-primary transition-colors">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+                src="/images/dhiraj.jpeg"
                 alt="Dhiraj - Student Developer from IIT Madras"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-2 gradient-text">Dhiraj</h3>
+            <h3 className="text-2xl font-bold mb-2 gradient-text">Dhiraj Talukdar</h3>
             <p className="text-purple-accent font-semibold mb-4">Backend Developer</p>
             <p className="text-gray-300 max-w-sm mx-auto mb-4">
               Expert in building robust backend systems and APIs that power amazing applications. 
               Focuses on scalable architecture and performance optimization.
             </p>
             <div className="flex justify-center space-x-3">
-              <a href="#" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
+              <a href="https://www.linkedin.com/in/dhiraj-talukdar-574983284/" className="text-blue-600 hover:text-blue-400 text-xl transition-colors">
                 <FaLinkedin />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors">
+              <a href="https://github.com/dhirajtalukdar" className="text-gray-400 hover:text-white text-xl transition-colors">
                 <FaGithub />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white text-xl transition-colors">
+              <a href="https://X.com/adhirajhun45631" className="text-gray-300 hover:text-white text-xl transition-colors">
                 <FaXTwitter />
               </a>
-              <a href="#" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
+              <a href="https://www.instagram.com/talukdardhiraj442diamond" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
                 <FaInstagram />
               </a>
-              <a href="#" className="text-purple-accent hover:text-purple-400 text-xl transition-colors" title="Portfolio Website">
+              {/* <a href="#" className="text-purple-accent hover:text-purple-400 text-xl transition-colors" title="Portfolio Website">
                 <FaGoogle />
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </div>

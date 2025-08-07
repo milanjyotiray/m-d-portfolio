@@ -92,11 +92,8 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-gray-300">
-            © 2024 Milan & Dhiraj. All rights reserved. |{' '}
-            <a href="#" className="text-blue-primary hover:text-blue-secondary transition-colors">
-              Portfolio
-            </a>{' '}
-            | Built with ❤️ at IIT Madras
+            © 2025 Milan & Dhiraj. All rights reserved.
+            | Built with ❤️ at Student Developer
           </p>
         </motion.div>
       </div>
