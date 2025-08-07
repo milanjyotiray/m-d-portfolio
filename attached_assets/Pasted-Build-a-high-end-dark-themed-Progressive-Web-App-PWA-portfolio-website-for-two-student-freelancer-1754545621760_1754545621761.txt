@@ -1,0 +1,155 @@
+Build a high-end, dark-themed Progressive Web App (PWA) portfolio website for two student freelancers — Milan and Dhiraj, from IIT Madras, showcasing their freelance work and offering professional services.
+
+They are not an agency or company — just two passionate student developers who build serious work.
+
+🎯 Hero Section (Homepage Top):
+Central tagline in large font:
+
+“We’re not an agency. Not a company. Just two students — who happen to be developers.”
+
+Subheading: “Hi! We’re Milan and Dhiraj, student developers from IIT Madras — building websites, brands, and digital experiences.”
+
+Use subtle 3D visuals (optional) in background.
+
+Call-to-action buttons: Explore Services, Contact Us
+
+🎨 Design & Color Preferences:
+Black/Dark theme
+
+Accent colors: Navy Blue, Royal Blue, or matching neon-style blues or purples
+
+Use Tailwind CSS for utility-first styling
+
+Animations: Use Framer Motion for elegant transitions
+
+Responsive design: Works on mobile, tablet, desktop
+
+Include a dark mode toggle (optional since default is dark)
+
+🧩 Website Sections:
+1. About Us
+Photos + short bios of Milan and Dhiraj
+
+Mention they are students from IIT Madras
+
+Show Tech Stack with real icons (not text):
+
+Use actual logos for: React, Next.js, Node.js, Figma, Tailwind CSS, WordPress, Firebase, etc.
+
+Arrange in a grid layout with tooltips on hover
+
+2. Social Links
+Add icon buttons for:
+
+LinkedIn
+
+GitHub
+
+X (Twitter)
+
+Instagram
+
+Personal portfolio link (can link to this site or another)
+
+3. Services Offered
+List these services with animated cards (clickable):
+
+Website Development
+
+UI/UX Design
+
+AI Chatbot Integration
+
+WordPress Website Development
+
+Branding & Logo Design
+
+Digital Marketing
+
+SEO Optimization
+
+Social Media Management
+
+Landing Pages for Startups
+
+On clicking any service, open a popup form or slide-in drawer.
+
+4. Projects / Portfolio
+Project cards showing:
+
+Title
+
+Screenshot
+
+Tech used (with icons)
+
+Short description
+
+Button: View Live / GitHub
+
+5. Client Feedback / Testimonials
+Carousel or grid layout
+
+Each testimonial should include:
+
+Name
+
+Feedback text
+
+Optional avatar and star rating
+
+6. Contact Us
+Show:
+
+Email
+
+Phone
+
+Instagram
+
+LinkedIn
+
+Include a form with fields:
+
+Name
+
+Email
+
+Project Description
+
+Budget
+
+Timeline
+
+On submit:
+
+Data goes to a Google Sheet (via Apps Script or webhook)
+
+Trigger a WhatsApp message (using pre-filled WhatsApp link or API)
+
+7. Footer
+Simple, clean footer with:
+
+Social icons
+
+Quick nav links
+
+Copyright
+
+Portfolio link
+
+⚙️ Development Requirements (Stack):
+React or Next.js
+
+Tailwind CSS
+
+Framer Motion for animations
+
+Three.js or Spline for optional 3D
+
+react-icons or similar for tech + social logos
+
+Google Sheets API or Apps Script for form submission
+
+WhatsApp API or prefilled message redirect
+
