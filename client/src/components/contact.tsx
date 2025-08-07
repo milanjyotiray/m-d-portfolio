@@ -15,6 +15,7 @@ export default function Contact() {
     name: "",
     email: "",
     projectDescription: "",
+    service: "",
     country: "",
     budget: "",
     timeline: ""
@@ -45,6 +46,7 @@ export default function Contact() {
         name: "",
         email: "",
         projectDescription: "",
+        service: "",
         country: "",
         budget: "",
         timeline: ""
@@ -228,6 +230,26 @@ export default function Contact() {
               </div>
 
               <div>
+                <Label htmlFor="service">Service Needed</Label>
+                <Select value={formData.service} onValueChange={(value) => setFormData(prev => ({ ...prev, service: value, budget: "" }))}>
+                  <SelectTrigger className="bg-dark-secondary border-gray-600 text-white focus:border-blue-primary">
+                    <SelectValue placeholder="Select service" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-dark-secondary border-gray-600">
+                    <SelectItem value="website-dev">Website Development</SelectItem>
+                    <SelectItem value="ui-ux">UI/UX Design</SelectItem>
+                    <SelectItem value="app-dev">Mobile App Development</SelectItem>
+                    <SelectItem value="ai-chatbot">AI Chatbot Integration</SelectItem>
+                    <SelectItem value="branding">Brand Design</SelectItem>
+                    <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
+                    <SelectItem value="seo">SEO Optimization</SelectItem>
+                    <SelectItem value="wordpress">WordPress Development</SelectItem>
+                    <SelectItem value="ecommerce">E-commerce Solutions</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
                 <Label htmlFor="country">Country</Label>
                 <Select value={formData.country} onValueChange={(value) => setFormData(prev => ({ ...prev, country: value, budget: "" }))}>
                   <SelectTrigger className="bg-dark-secondary border-gray-600 text-white focus:border-blue-primary">
@@ -254,21 +276,75 @@ export default function Contact() {
                     </SelectTrigger>
                     <SelectContent className="bg-dark-secondary border-gray-600">
                       {formData.country === "india" ? (
-                        <>
-                          <SelectItem value="under-4l">Under ₹4,00,000</SelectItem>
-                          <SelectItem value="4l-8l">₹4,00,000 - ₹8,00,000</SelectItem>
-                          <SelectItem value="8l-20l">₹8,00,000 - ₹20,00,000</SelectItem>
-                          <SelectItem value="20l-40l">₹20,00,000 - ₹40,00,000</SelectItem>
-                          <SelectItem value="40l-plus">₹40,00,000+</SelectItem>
-                        </>
+                        // India budget ranges based on service
+                        formData.service === "website-dev" || formData.service === "wordpress" ? (
+                          <>
+                            <SelectItem value="under-50k">Under ₹50,000</SelectItem>
+                            <SelectItem value="50k-1l">₹50,000 - ₹1,00,000</SelectItem>
+                            <SelectItem value="1l-3l">₹1,00,000 - ₹3,00,000</SelectItem>
+                            <SelectItem value="3l-5l">₹3,00,000 - ₹5,00,000</SelectItem>
+                            <SelectItem value="5l-plus">₹5,00,000+</SelectItem>
+                          </>
+                        ) : formData.service === "app-dev" ? (
+                          <>
+                            <SelectItem value="under-2l">Under ₹2,00,000</SelectItem>
+                            <SelectItem value="2l-5l">₹2,00,000 - ₹5,00,000</SelectItem>
+                            <SelectItem value="5l-10l">₹5,00,000 - ₹10,00,000</SelectItem>
+                            <SelectItem value="10l-20l">₹10,00,000 - ₹20,00,000</SelectItem>
+                            <SelectItem value="20l-plus">₹20,00,000+</SelectItem>
+                          </>
+                        ) : formData.service === "ui-ux" || formData.service === "branding" ? (
+                          <>
+                            <SelectItem value="under-25k">Under ₹25,000</SelectItem>
+                            <SelectItem value="25k-75k">₹25,000 - ₹75,000</SelectItem>
+                            <SelectItem value="75k-1.5l">₹75,000 - ₹1,50,000</SelectItem>
+                            <SelectItem value="1.5l-3l">₹1,50,000 - ₹3,00,000</SelectItem>
+                            <SelectItem value="3l-plus">₹3,00,000+</SelectItem>
+                          </>
+                        ) : (
+                          <>
+                            <SelectItem value="under-30k">Under ₹30,000</SelectItem>
+                            <SelectItem value="30k-1l">₹30,000 - ₹1,00,000</SelectItem>
+                            <SelectItem value="1l-2l">₹1,00,000 - ₹2,00,000</SelectItem>
+                            <SelectItem value="2l-5l">₹2,00,000 - ₹5,00,000</SelectItem>
+                            <SelectItem value="5l-plus">₹5,00,000+</SelectItem>
+                          </>
+                        )
                       ) : (
-                        <>
-                          <SelectItem value="under-5k">Under $5,000</SelectItem>
-                          <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                          <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                          <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                          <SelectItem value="50k-plus">$50,000+</SelectItem>
-                        </>
+                        // International budget ranges based on service
+                        formData.service === "website-dev" || formData.service === "wordpress" ? (
+                          <>
+                            <SelectItem value="under-2k">Under $2,000</SelectItem>
+                            <SelectItem value="2k-5k">$2,000 - $5,000</SelectItem>
+                            <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
+                            <SelectItem value="10k-20k">$10,000 - $20,000</SelectItem>
+                            <SelectItem value="20k-plus">$20,000+</SelectItem>
+                          </>
+                        ) : formData.service === "app-dev" ? (
+                          <>
+                            <SelectItem value="under-10k">Under $10,000</SelectItem>
+                            <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
+                            <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
+                            <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
+                            <SelectItem value="100k-plus">$100,000+</SelectItem>
+                          </>
+                        ) : formData.service === "ui-ux" || formData.service === "branding" ? (
+                          <>
+                            <SelectItem value="under-1k">Under $1,000</SelectItem>
+                            <SelectItem value="1k-3k">$1,000 - $3,000</SelectItem>
+                            <SelectItem value="3k-7k">$3,000 - $7,000</SelectItem>
+                            <SelectItem value="7k-15k">$7,000 - $15,000</SelectItem>
+                            <SelectItem value="15k-plus">$15,000+</SelectItem>
+                          </>
+                        ) : (
+                          <>
+                            <SelectItem value="under-1k">Under $1,000</SelectItem>
+                            <SelectItem value="1k-5k">$1,000 - $5,000</SelectItem>
+                            <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
+                            <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
+                            <SelectItem value="25k-plus">$25,000+</SelectItem>
+                          </>
+                        )
                       )}
                     </SelectContent>
                   </Select>

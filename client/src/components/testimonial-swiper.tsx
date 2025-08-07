@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Testimonial {
   name: string;
@@ -16,7 +16,25 @@ interface TestimonialSwiperProps {
 
 export default function TestimonialSwiper({ testimonials }: TestimonialSwiperProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  
+  // Update items per page based on screen size
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerPage(1); // Mobile: 1 item
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(2); // Tablet: 2 items
+      } else {
+        setItemsPerPage(3); // Desktop: 3 items
+      }
+    };
+    
+    updateItemsPerPage();
+    window.addEventListener('resize', updateItemsPerPage);
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
+  
   const maxIndex = Math.max(0, testimonials.length - itemsPerPage);
 
   const nextSlide = () => {
@@ -41,7 +59,11 @@ export default function TestimonialSwiper({ testimonials }: TestimonialSwiperPro
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3"
+              className={`flex-shrink-0 ${
+                itemsPerPage === 1 ? 'w-full' : 
+                itemsPerPage === 2 ? 'w-full md:w-1/2' : 
+                'w-full md:w-1/2 lg:w-1/3'
+              }`}
             >
               <motion.div
                 className="bg-dark-secondary p-8 rounded-2xl border border-gray-700 h-full"
@@ -82,24 +104,24 @@ export default function TestimonialSwiper({ testimonials }: TestimonialSwiperPro
         <button
           onClick={prevSlide}
           disabled={!canGoPrev}
-          className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
+          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all ${
             canGoPrev 
               ? 'bg-blue-primary hover:bg-blue-secondary text-white' 
               : 'bg-gray-700 text-gray-500 cursor-not-allowed'
           }`}
         >
-          <FaChevronLeft />
+          <FaChevronLeft className="text-sm sm:text-base" />
         </button>
         <button
           onClick={nextSlide}
           disabled={!canGoNext}
-          className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
+          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all ${
             canGoNext 
               ? 'bg-blue-primary hover:bg-blue-secondary text-white' 
               : 'bg-gray-700 text-gray-500 cursor-not-allowed'
           }`}
         >
-          <FaChevronRight />
+          <FaChevronRight className="text-sm sm:text-base" />
         </button>
       </div>
 

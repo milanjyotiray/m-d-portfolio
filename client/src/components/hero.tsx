@@ -81,22 +81,25 @@ export default function Hero() {
           </motion.p>
 
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button
               onClick={() => scrollToSection('services')}
-              className="bg-gradient-to-r from-blue-primary to-blue-secondary hover:from-blue-secondary hover:to-purple-accent px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-blue-primary/25"
+              className="relative bg-gradient-to-r from-blue-primary via-purple-accent to-blue-secondary hover:from-purple-accent hover:via-blue-primary hover:to-purple-accent text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg transition-all duration-500 shadow-2xl hover:shadow-purple-accent/25 overflow-hidden group w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Explore Services
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+              <span className="relative z-10 flex items-center justify-center">
+                ✨ Explore Services
+              </span>
             </motion.button>
             <motion.button
               onClick={() => scrollToSection('contact')}
-              className="border-2 border-blue-primary text-blue-primary hover:bg-blue-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
+              className="border-2 border-blue-primary text-blue-primary hover:bg-blue-primary hover:text-white px-6 sm:px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

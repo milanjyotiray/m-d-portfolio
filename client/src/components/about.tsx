@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaFigma, FaWordpress, FaGithub, FaGoogle, FaLinkedin, FaInstagram, FaTwitter, FaApple, FaAndroid } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaFigma, FaWordpress, FaGithub, FaGoogle, FaLinkedin, FaInstagram, FaApple, FaAndroid } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiNextdotjs, SiTailwindcss, SiFirebase, SiFlutter, SiReact, SiKotlin, SiSwift } from "react-icons/si";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -38,7 +39,7 @@ export default function About() {
         </motion.div>
 
         {/* Team Members */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {/* Milan */}
           <motion.div
             className="text-center"
@@ -47,7 +48,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="w-64 h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-primary/30 hover:border-blue-primary transition-colors">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-primary/30 hover:border-blue-primary transition-colors">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
                 alt="Milan - Student Developer from IIT Madras"
@@ -67,8 +68,8 @@ export default function About() {
               <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors">
                 <FaGithub />
               </a>
-              <a href="#" className="text-blue-400 hover:text-blue-300 text-xl transition-colors">
-                <FaTwitter />
+              <a href="#" className="text-gray-300 hover:text-white text-xl transition-colors">
+                <FaXTwitter />
               </a>
               <a href="#" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
                 <FaInstagram />
@@ -87,7 +88,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-64 h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-purple-accent/30 hover:border-purple-accent transition-colors">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full mx-auto mb-6 overflow-hidden border-4 border-purple-accent/30 hover:border-purple-accent transition-colors">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
                 alt="Dhiraj - Student Developer from IIT Madras"
@@ -107,8 +108,8 @@ export default function About() {
               <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors">
                 <FaGithub />
               </a>
-              <a href="#" className="text-blue-400 hover:text-blue-300 text-xl transition-colors">
-                <FaTwitter />
+              <a href="#" className="text-gray-300 hover:text-white text-xl transition-colors">
+                <FaXTwitter />
               </a>
               <a href="#" className="text-pink-500 hover:text-pink-400 text-xl transition-colors">
                 <FaInstagram />
@@ -132,7 +133,7 @@ export default function About() {
           <p className="text-gray-300 mb-12">Technologies we use to build amazing digital experiences</p>
         </motion.div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 sm:gap-8 justify-items-center">
           {techStack.map((tech, index) => (
             <Tooltip key={tech.name}>
               <TooltipTrigger asChild>
@@ -144,8 +145,8 @@ export default function About() {
                   whileHover={{ y: -5, scale: 1.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="w-16 h-16 bg-dark-tertiary rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-primary/20 hover:to-blue-secondary/20 border border-gray-700 hover:border-blue-primary/50 transition-all duration-300">
-                    <tech.icon className={`text-3xl ${tech.color}`} />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-dark-tertiary rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-primary/20 hover:to-blue-secondary/20 border border-gray-700 hover:border-blue-primary/50 transition-all duration-300">
+                    <tech.icon className={`text-xl sm:text-2xl lg:text-3xl ${tech.color}`} />
                   </div>
                 </motion.div>
               </TooltipTrigger>
